@@ -82,7 +82,7 @@
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Broken -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Broken">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Use_State"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Integrity"/>
     </owl:Class>
     
 
@@ -209,6 +209,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Compostable_Plastic">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Plastic_Packaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Container_Glass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Container_Glass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Glass_Material"/>
     </owl:Class>
     
 
@@ -451,6 +459,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Plastic_Material"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hazardous_Substance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hazardous_Substance">
@@ -487,6 +503,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Incandescent_Lamp">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Intact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Intact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Integrity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Integrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Integrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#State"/>
     </owl:Class>
     
 
@@ -605,22 +637,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging_Glass -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging_Glass">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Glass_Material"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging_Plastic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging_Plastic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Plastic_Material"/>
     </owl:Class>
     
 
@@ -788,7 +804,7 @@
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Small -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Small">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Size_Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Fits_in_bin"/>
     </owl:Class>
     
 

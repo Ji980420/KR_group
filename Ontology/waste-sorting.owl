@@ -15,6 +15,189 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#accepts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#accepts">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+        <rdfs:comment xml:lang="en">Inverse of disposedVia: which items a disposal route accepts.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#containsMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#containsMaterial">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Component"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Material"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Every material an item contains, directly (madeOf) or through its components (property chain hasComponent o madeOf).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Disposal_Route"/>
+        <rdfs:comment xml:lang="en">The disposal route (bin or drop-off point) an item belongs in.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Cleanliness"/>
+        <rdfs:comment xml:lang="en">Value partition: an item has exactly one cleanliness value.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasComponent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Component"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Component"/>
+        <rdfs:comment xml:lang="en">Part-whole relation. Transitive: a part of a part is also a part of the whole.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasComponent"/>
+        <rdfs:comment xml:lang="en">Direct parts only. Simple (not transitive), so it may be used in cardinality restrictions, which OWL 2 DL forbids on transitive properties.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Fill_State"/>
+        <rdfs:comment xml:lang="en">Value partition: empty or full.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasIntegrity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasIntegrity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Integrity"/>
+        <rdfs:comment xml:lang="en">Value partition: intact or broken.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Size_Class"/>
+        <rdfs:comment xml:lang="en">Value partition: fits in a bin or bulky (size as classes, no numbers).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasUseState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasUseState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Use_State"/>
+        <rdfs:comment xml:lang="en">Value partition: used or unused.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#isComponentOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasComponent"/>
+        <rdfs:comment xml:lang="en">Inverse of hasComponent.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#containsMaterial"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Component"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Material"/>
+        <rdfs:comment xml:lang="en">The main material of an item or component. Functional: further materials are modelled as components with their own madeOf.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDeposit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDeposit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">True if the packaging carries a deposit (statiegeld).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////

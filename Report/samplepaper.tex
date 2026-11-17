@@ -33,7 +33,7 @@
 % an abbreviated paper title here
 %
 \author{First Author\inst{1}\orcidID{0000-1111-2222-3333} \and
-Second Author\inst{2,3}\orcidID{1111-2222-3333-4444} \and
+Mason Kasefang\inst{2,3}\orcidID{1111-2222-3333-4444} \and
 Third Author\inst{3}\orcidID{2222--3333-4444-5555}}
 %
 \authorrunning{F. Author et al.}
@@ -58,6 +58,56 @@ The abstract should briefly summarize the contents of the paper in
 %
 %
 %
+\section{Introduction}
+This project aims to develop a knowledge base for answering household
+waste-sorting questions. It focuses on how an item's type, material, condition
+and components relate to the available disposal routes. The ontology provides
+a shared vocabulary for these concepts, while sorting rules are intended to
+specify when each route is appropriate.
+
+\section{Proposed Knowledge Sources}
+We propose using the Dutch waste-sorting guidance as the basis
+for the disposal rules. For example, the guidance requires paper and cardboard
+to be clean and dry and restricts glass containers to food and drink packaging
+\cite{waste-sorting}. Rules based on this guidance would apply specifically
+to Amsterdam. Their applicability elsewhere would need to be checked against
+local guidance.
+
+\section{Competency Questions}
+The proposed competency questions ask which disposal route is appropriate for
+an item, whether its condition changes that route, which items require a
+collection point, and whether components must be separated before disposal.
+Greasy pizza boxes and broken window glass provide examples of the
+distinctions the knowledge base needs to capture. These questions guide the
+choice of relationships and sorting rules.
+
+\section{Ontology Design}
+The ontology is organised around five main classes: waste items, materials,
+components, states and disposal routes. Waste items are divided into categories
+such as packaging, paper products, electrical waste and hazardous waste, with
+more specific classes below them. For example, a plastic bottle is a type of
+plastic packaging, which is itself a type of packaging and therefore a waste
+item.
+
+Waste items are represented separately from their materials and components.
+For example, \texttt{Plastic\_\allowbreak Bottle} is a waste-item class, while
+\texttt{Packaging\_Plastic} is a material class. Lids, caps and coatings are
+represented as components. The class hierarchy identifies these categories but
+does not specify which materials or components belong to each item.
+
+The state hierarchy describes whether an item is empty or full, and whether it
+is clean and dry, greasy, food-soiled or wet. An item's condition can therefore
+be described separately from its classification as a bottle, box or other
+waste item.
+
+Disposal routes are grouped into household bins, neighbourhood containers and
+drop-off points. These include paper and residual bins, glass and textile
+containers, recycling centres and deposit return. An item's classification
+alone does not determine its disposal route. For example, classifying a pizza
+box as paper packaging does not establish that it belongs in a paper bin.
+Sorting rules must link an item's characteristics to the appropriate disposal
+route.
+
 \section{First Section}
 \subsection{A Subsection Sample}
 Please note that the first paragraph of a section or subsection is
@@ -157,23 +207,11 @@ Company X and owns stock in Company Y. Author C is a member of committee Z.
 % \bibliography{mybibliography}
 %
 \begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
 
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+\bibitem{waste-sorting}
+Afvalscheidingswijzer.
+\url{https://www.afvalscheidingswijzer.nl/},
+accessed 17 November 2026.
 
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}, last accessed 2023/10/25
 \end{thebibliography}
 \end{document}

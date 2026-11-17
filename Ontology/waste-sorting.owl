@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting/"
+<rdf:RDF xmlns="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#"
      xml:base="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -2127,12 +2127,120 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#brokenMirror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#brokenMirror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Mirror"/>
+        <rdfs:comment xml:lang="en">Expected: Flat_Glass_Item -> recyclingCentre.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cardBattery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cardBattery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Built_In_Battery"/>
+        <rdfs:comment xml:lang="en">Button cell inside musicalGreetingCard.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#chemicalWastePoint -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#chemicalWastePoint">
         <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Chemical_Waste_Point"/>
         <rdfs:comment xml:lang="en">Drop-off point for small chemical waste such as paint and medicine.</rdfs:comment>
         <rdfs:label xml:lang="nl">klein chemisch afval (kca)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cleanJeans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cleanJeans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clothing"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Textile_Bin_Waste -> textileBin.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cleanPizzaBox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cleanPizzaBox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Pizza_Box"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Paper_Bin_Waste -> paperBin. Needs the closure axiom (no components) under the open world.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Coating"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Plastic coating of singleCoatedPaper1.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Coating"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">First plastic coating of doubleCoatedPaper1.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Coating"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Second plastic coating of doubleCoatedPaper1.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coffeeGrounds1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coffeeGrounds1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Coffee_Grounds"/>
+        <rdfs:comment xml:lang="en">Expected: Organic_Bin_Waste -> organicBin.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2147,6 +2255,37 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#compostableBag -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#compostableBag">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Compostable_Plastic"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Empty"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDeposit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasDeposit>
+        <rdfs:comment xml:lang="en">Expected: Plastic_Packaging but NOT PMD_Waste (bioplastic) -> residualBin.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#depositBottle1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#depositBottle1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Deposit_Plastic_Bottle"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Empty"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Deposit_Item -> depositReturn. Provably NOT PMD_Waste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#depositReturn -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#depositReturn">
@@ -2157,12 +2296,228 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#doubleCoatedPaper1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#doubleCoatedPaper1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper_Product"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingB"/>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingC"/>
+        <rdfs:comment xml:lang="en">Expected: two plastic coatings -> Double_Coated_Paper -> residualBin. Provably NOT Paper_Bin_Waste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#drinkingGlass1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#drinkingGlass1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Drinking_Glass"/>
+        <rdfs:comment xml:lang="en">Expected: Non_Packaging_Glass -> residualBin. Provably NOT Glass_Bin_Waste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#emptyYoghurtPot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#emptyYoghurtPot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Dairy_Cup"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Empty"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDeposit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasDeposit>
+        <rdfs:comment xml:lang="en">Expected: Plastic_Packaging, PMD_Waste -> pmdBin.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#fullYoghurtPot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#fullYoghurtPot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Dairy_Cup"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Full"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDeposit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasDeposit>
+        <rdfs:comment xml:lang="en">Expected: provably NOT PMD_Waste, but no route: OWL has no 'otherwise residual' default.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#glassBin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#glassBin">
         <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Glass_Bin"/>
         <rdfs:comment xml:lang="en">Neighbourhood container for glass packaging.</rdfs:comment>
         <rdfs:label xml:lang="nl">glasbak</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#greasyPizzaBox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#greasyPizzaBox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Pizza_Box"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Greasy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Paper_Packaging, Contaminated_Paper -> residualBin. Provably NOT Paper_Bin_Waste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#jamJar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#jamJar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Glass_Bottle_Or_Jar"/>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#jamJarLid"/>
+        <rdfs:comment xml:lang="en">Expected: Glass_Bin_Waste -> glassBin; Mixed_Material_Item because of the steel lid.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#jamJarLid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#jamJarLid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Lid"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Steel"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Steel lid of jamJar1.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#leftoverPaint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#leftoverPaint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paint"/>
+        <rdfs:comment xml:lang="en">Expected: Hazardous_Waste -> chemicalWastePoint.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#milkCarton1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#milkCarton1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Drink_Carton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasFillState"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Empty"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#milkCartonCap"/>
+        <hasDeposit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasDeposit>
+        <rdfs:comment xml:lang="en">Expected: PMD_Waste -> pmdBin; contains Hard_Plastic via the property chain. Provably NOT paper.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#milkCartonCap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#milkCartonCap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Cap"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hard_Plastic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Plastic screw cap of milkCarton1.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#musicalGreetingCard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#musicalGreetingCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper_Product"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#madeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cardBattery"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#cardBattery"/>
+        <rdfs:comment xml:lang="en">Rule conflict on purpose: both Paper_Bin_Waste and Battery_Containing_Item, so two routes. OWL cannot express that the battery rule should win; see the logic programming part.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#newspaper1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#newspaper1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Newspaper"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#containsMaterial"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper_Based_Material"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Paper_Bin_Waste, Pure_Paper_Item -> paperBin (closure axioms on components and materials).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#oldPhone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#oldPhone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Mobile_Phone"/>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#phoneBattery"/>
+        <rdfs:comment xml:lang="en">Expected: Battery_Containing_Item -> collectionBox.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2187,12 +2542,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#phoneBattery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#phoneBattery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Built_In_Battery"/>
+        <rdfs:comment xml:lang="en">Battery inside oldPhone.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#pmdBin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#pmdBin">
         <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#PMD_Bin"/>
         <rdfs:comment xml:lang="en">Household bin or bag for plastic packaging, metal packaging and drink cartons.</rdfs:comment>
         <rdfs:label xml:lang="nl">pmd-bak</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#prunedBranches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#prunedBranches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Bulky_Garden_Waste"/>
+        <rdfs:comment xml:lang="en">Expected: recyclingCentre. Provably NOT Organic_Bin_Waste (bulky).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2217,12 +2590,64 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#singleCoatedPaper1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#singleCoatedPaper1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Single_Coated_Paper"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clean_And_Dry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasDirectComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingA"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <hasDirectComponent rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingA"/>
+        <rdfs:comment xml:lang="en">Expected: coatingA inferred Plastic_Coating; at most one coating -> Paper_Bin_Waste -> paperBin.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#textileBin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#textileBin">
         <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Textile_Bin"/>
         <rdfs:comment xml:lang="en">Neighbourhood container for clean, dry textiles.</rdfs:comment>
         <rdfs:label xml:lang="nl">textielcontainer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#usedFryingOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#usedFryingOil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Cooking_Oil"/>
+        <rdfs:comment xml:lang="en">Expected: recyclingCentre. Provably NOT Organic_Bin_Waste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#wetTShirt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#wetTShirt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Clothing"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasCleanliness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Wet"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="en">Expected: Contaminated_Textile -> residualBin. Provably NOT Textile_Bin_Waste.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2384,6 +2809,13 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#textileBin"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#coatingC"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>

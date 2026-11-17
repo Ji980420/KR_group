@@ -280,6 +280,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#collectionBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Items with a built-in battery, at any depth of the component structure.</rdfs:comment>
     </owl:Class>
     
@@ -343,6 +349,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Bulky"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Plant_Waste"/>
     </owl:Class>
     
@@ -391,6 +403,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Cat_Litter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Animal_Waste"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -509,6 +527,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Bioplastic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -566,6 +590,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Paper or cardboard that is greasy, food-soiled or wet.</rdfs:comment>
     </owl:Class>
     
@@ -583,6 +613,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Textile_Waste"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Wet or dirty textiles.</rdfs:comment>
     </owl:Class>
     
@@ -598,6 +634,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Organic_Matter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -606,6 +648,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Crockery">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -659,6 +707,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#depositReturn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Packaging that carries a deposit (statiegeld).</rdfs:comment>
     </owl:Class>
     
@@ -708,6 +762,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Coating"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -734,6 +794,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Paper_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Paper with a plastic coating on both sides.</rdfs:comment>
     </owl:Class>
     
@@ -763,6 +829,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Tableware_Glass"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Mirror"/>
     </owl:Class>
     
@@ -776,10 +848,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Drop_Off_Waste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Drop_Off_Waste">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Drop_Off_Point"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:comment xml:lang="en">Items you have to bring to a drop-off point.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Electrical_Waste -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Electrical_Waste">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#collectionBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -817,6 +915,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Energy_Saving_Lamp">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Lamp"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#collectionBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Incandescent_Lamp"/>
     </owl:Class>
     
@@ -869,6 +973,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Mirrors and window glass.</rdfs:comment>
     </owl:Class>
     
@@ -950,6 +1060,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#glassBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Glass packaging such as bottles and jars.</rdfs:comment>
     </owl:Class>
     
@@ -1044,6 +1160,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#chemicalWastePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Anything containing a hazardous substance, directly or in one of its components.</rdfs:comment>
     </owl:Class>
     
@@ -1061,6 +1183,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Hygiene_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1069,6 +1197,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Incandescent_Lamp">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Lamp"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1093,6 +1227,26 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Kerbside_Waste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Kerbside_Waste">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Household_Bin"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:comment xml:lang="en">Items collected at the kerb: organic, PMD, paper or residual bin.</rdfs:comment>
     </owl:Class>
     
 
@@ -1127,6 +1281,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#hasSize"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Bulky"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1311,6 +1471,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Biodegradable_Waste"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#organicBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Food and garden waste that fits in the bin, except cooking oil.</rdfs:comment>
     </owl:Class>
     
@@ -1373,6 +1539,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Packaging"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#pmdBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Empty plastic, metal or drink-carton packaging without a deposit.</rdfs:comment>
     </owl:Class>
     
@@ -1448,6 +1620,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#paperBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Clean, dry paper or cardboard with at most one plastic coating.</rdfs:comment>
     </owl:Class>
     
@@ -1631,6 +1809,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Polystyrene"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#recyclingCentre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1671,6 +1855,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Residual_Bin">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Household_Bin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Residual_Waste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Residual_Waste">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#residualBin"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Waste_Item"/>
+        <rdfs:comment xml:lang="en">Everything that is routed to residual waste.</rdfs:comment>
     </owl:Class>
     
 
@@ -1816,6 +2020,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#Textile_Waste"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#disposedVia"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/liji8/ontologies/2026/10/waste-sorting#textileBin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Clean, dry textiles that fit in a bag.</rdfs:comment>
     </owl:Class>
     
